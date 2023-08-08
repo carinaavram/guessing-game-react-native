@@ -4,8 +4,6 @@
 
 The Guessing Game App is a mini game where the user thinks of a number and the phone tries to guess it. The user provides hints (+ or -) to guide the phone's guesses. Each round of guesses is displayed on the screen along with the round number and the phone's guess. The game continues until the phone successfully guesses the user's number. At the end of the game, the app reveals how many rounds were needed and displays the user's chosen number.
 
-This app was built using React Native and Expo.
-
 ## Features
 
 - User chooses a secret number.
