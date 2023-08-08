@@ -4,8 +4,8 @@ import {
   ImageBackground,
   SafeAreaView,
   ActivityIndicator,
-  StatusBar,
 } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -70,12 +70,13 @@ export default function App() {
   }
 
   return (
+    <>
+    <StatusBar style='inverted' />
       <LinearGradient
         colors={[Colors.primary700, Colors.accent500]}
         style={styles.appContainer}
         onLayout={onLayoutRootView}
       >
-        <StatusBar barStyle='light-content' translucent={true} />
         <ImageBackground
           source={require('./assets/images/background.png')}
           resizeMode="cover"
@@ -85,6 +86,7 @@ export default function App() {
           <SafeAreaView style={styles.appContainer}>{screen}</SafeAreaView>
         </ImageBackground>
       </LinearGradient>
+      </>
   );
 }
 
